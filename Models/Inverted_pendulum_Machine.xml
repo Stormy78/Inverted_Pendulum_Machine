@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimscapeMultibodyImportXML xmlns="urn:mathworks:SimscapeMultibody:import"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                            version="2.0">
+   <Created by="Leonid Fraiman" from="Onshape" on="07/12/25||13:14:10"
+            using="Simscape Multibody Exporter"/>
+   <ModelUnits length="millimeter" mass="gram"/>
+   <DataUnits length="meter" mass="kilogram"/>
+   <RootAssembly name="Inverted_pendulum_Machine" uid="811676405de147699c462351"
+                 version="w-be752273a7a52b2feb70b88b">
+      <InstanceTree>
+         <Instance entityUid="JaD*:*ef558c5dd2f55ea60be40155" name="Pendulum_Head &lt;1&gt;"
+                   uid="MRCEEhH4VVQ263O5p">
+            <Transform>
+               <Rotation>0.000000000 0.000000000 -1.000000000 0.000000000 1.000000000 0.000000000 1.000000000 0.000000000 0.000000000 </Rotation>
+               <Translation>0.450000000 0.014000000 0.426000000 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JHD*:*ef558c5dd2f55ea60be40155" name="Base_Pole &lt;1&gt;"
+                   uid="MW2+Hy/Xt3d5gtMrj">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.000000000 0.000000000 0.000000000 </Translation>
+            </Transform>
+         </Instance>
+         <Instance entityUid="JPD*:*ef558c5dd2f55ea60be40155" name="Motorized_Head &lt;1&gt;"
+                   uid="MjoBcazlE0oIcB9wz">
+            <Transform>
+               <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 0.000000000 0.000000000 1.000000000 </Rotation>
+               <Translation>0.000000000 0.000000000 -0.024000000 </Translation>
+            </Transform>
+         </Instance>
+      </InstanceTree>
+      <Constraints/>
+      <Joints>
+         <Weld name="Base_Pole_to_World">
+            <BaseFrame>
+               <InstancePath/>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 -0.000000000 0.000000000 -1.000000000 -0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+                  <Translation>0.000000000 0.000000000 0.000000000 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MW2+Hy/Xt3d5gtMrj</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+                  <Translation>0.000000000 0.000000000 0.000000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Weld>
+         <Revolute name="Motorized_Head_to_Base">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>MW2+Hy/Xt3d5gtMrj</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 -0.000000000 0.000000000 -1.000000000 -0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+                  <Translation>0.000000000 0.000000000 0.401000000 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MjoBcazlE0oIcB9wz</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 0.000000000 0.000000000 0.000000000 -1.000000000 </Rotation>
+                  <Translation>0.000000000 0.000000000 0.425000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+         <Revolute name="Pendulum_Head_to_Motor">
+            <BaseFrame>
+               <InstancePath>
+                  <Uid>MjoBcazlE0oIcB9wz</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>0.000000000 1.000000000 -0.000000000 0.000000000 0.000000000 1.000000000 1.000000000 -0.000000000 -0.000000000 </Rotation>
+                  <Translation>-0.000000000 -0.301000000 0.450000000 </Translation>
+               </Transform>
+            </BaseFrame>
+            <FollowerFrame>
+               <InstancePath>
+                  <Uid>MRCEEhH4VVQ263O5p</Uid>
+               </InstancePath>
+               <Transform>
+                  <Rotation>1.000000000 0.000000000 0.000000000 0.000000000 0.000000000 1.000000000 0.000000000 -1.000000000 0.000000000 </Rotation>
+                  <Translation>-0.000000000 -0.315000000 0.450000000 </Translation>
+               </Transform>
+            </FollowerFrame>
+         </Revolute>
+      </Joints>
+   </RootAssembly>
+   <Assemblies/>
+   <Parts>
+      <Part name="Base_Pole" uid="JHD*:*ef558c5dd2f55ea60be40155">
+         <ModelUnits length="millimeter" mass="gram"/>
+         <MassProperties>
+            <Mass>2.50799625</Mass>
+            <CenterOfMass>-0.000000000 0.000000000 0.191145656 </CenterOfMass>
+            <Inertia>0.037595788 0.037595788 0.003227283 0.000000000 0.000000000 0.000000000 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Base_Pole.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.929411765" g="0.811764706" r="0.615686275"/>
+            <Diffuse a="1.000000000" b="0.929411765" g="0.811764706" r="0.615686275"/>
+            <Specular a="1.000000000" b="0.929411765" g="0.811764706" r="0.615686275"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="Motorized_Head" uid="JPD*:*ef558c5dd2f55ea60be40155">
+         <ModelUnits length="millimeter" mass="gram"/>
+         <MassProperties>
+            <Mass>0.262879293</Mass>
+            <CenterOfMass>0.000000985 -0.098386012 0.452715017 </CenterOfMass>
+            <Inertia>0.002845666 0.000134038 0.002886244 -0.000070198 0.000000003 -0.000000008 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Motorized_Head.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Diffuse a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Specular a="1.000000000" b="0.647058824" g="0.647058824" r="0.647058824"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+      <Part name="Pendulum_Head" uid="JaD*:*ef558c5dd2f55ea60be40155">
+         <ModelUnits length="millimeter" mass="gram"/>
+         <MassProperties>
+            <Mass>0.0727418499</Mass>
+            <CenterOfMass>0.125197331 -0.325401521 0.450000226 </CenterOfMass>
+            <Inertia>0.000003283 0.000689246 0.000688632 -0.000000000 0.000000001 -0.000003657 </Inertia>
+         </MassProperties>
+         <GeometryFile name="Pendulum_Head.step" type="STEP"/>
+         <VisualProperties>
+            <Ambient a="1.000000000" b="0.705882353" g="0.380392157" r="0.231372549"/>
+            <Diffuse a="1.000000000" b="0.705882353" g="0.380392157" r="0.231372549"/>
+            <Specular a="1.000000000" b="0.705882353" g="0.380392157" r="0.231372549"/>
+            <Emissive a="1" b="0" g="0" r="0"/>
+            <Shininess>0.5</Shininess>
+         </VisualProperties>
+      </Part>
+   </Parts>
+</SimscapeMultibodyImportXML>
